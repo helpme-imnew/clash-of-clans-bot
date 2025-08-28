@@ -1,0 +1,179 @@
+import pyautogui
+import time
+import os
+
+from pyscreeze import Point
+
+#the base needs to be pulled into the top right corner, which is done automatically
+
+time.sleep(4)
+
+while True:
+    pyautogui.moveTo(1578, 484, duration=2) #line up screen script
+    pyautogui.dragTo(1178, 724, duration=2)
+
+
+    pyautogui.moveTo(798, 586, duration=2) #gold storage script
+    pyautogui.click()
+
+    pyautogui.moveTo(1073, 862, duration=2)
+    pyautogui.click()
+    pyautogui.moveTo(1335, 919, duration=2)
+    pyautogui.click()
+    pyautogui.moveTo(1824, 539, duration=2)
+    pyautogui.click()
+    time.sleep(3)
+    pyautogui.click()
+
+    pyautogui.moveTo(747, 629, duration=2)
+    pyautogui.click()
+
+    pyautogui.moveTo(1073, 862, duration=2)
+    pyautogui.click()
+    pyautogui.moveTo(1335, 919, duration=2)
+    pyautogui.click()
+    pyautogui.moveTo(1824, 539, duration=2)
+    pyautogui.click()
+    time.sleep(3)
+    pyautogui.click()
+
+    pyautogui.moveTo(911, 680, duration=2) #elixer storage
+    pyautogui.click()
+
+    pyautogui.moveTo(1073, 862, duration=2)
+    pyautogui.click()
+    pyautogui.moveTo(1335, 919, duration=2)
+    pyautogui.click()
+    pyautogui.moveTo(1824, 539, duration=2)
+    pyautogui.click()
+    time.sleep(3)
+    pyautogui.click()
+
+    pyautogui.moveTo(859, 706, duration=2)
+    pyautogui.click()
+
+    pyautogui.moveTo(1073, 862, duration=2)
+    pyautogui.click()
+    pyautogui.moveTo(1335, 919, duration=2)
+    pyautogui.click()
+    pyautogui.moveTo(1824, 539, duration=2)
+    pyautogui.click()
+    time.sleep(3)
+    pyautogui.click()
+
+    pyautogui.moveTo(844, 469, duration=2) #these are the gold mines
+    pyautogui.click()
+
+    time.sleep(3)
+    pyautogui.click()
+
+    pyautogui.moveTo(1073, 862, duration=2)
+    pyautogui.click()
+    pyautogui.moveTo(1335, 919, duration=2)
+    pyautogui.click()
+    pyautogui.moveTo(1824, 539, duration=2)
+    pyautogui.click()
+    time.sleep(3)
+    pyautogui.click()
+
+    pyautogui.moveTo(900, 515, duration=2)
+    pyautogui.click()
+
+    pyautogui.moveTo(1073, 862, duration=2)
+    pyautogui.click()
+    pyautogui.moveTo(1335, 919, duration=2)
+    pyautogui.click()
+    pyautogui.moveTo(1824, 539, duration=2)
+    pyautogui.click()
+    time.sleep(3)
+    pyautogui.click()
+
+    pyautogui.moveTo(849, 548, duration=2)
+    pyautogui.click()
+
+    pyautogui.moveTo(1073, 862, duration=2)
+    pyautogui.click()
+    pyautogui.moveTo(1335, 919, duration=2)
+    pyautogui.click()
+    pyautogui.moveTo(1824, 539, duration=2)
+    pyautogui.click()
+    time.sleep(3)
+    pyautogui.click()
+
+    pyautogui.moveTo(1013, 599, duration=2) #these are the elixer pumps
+    pyautogui.click()
+    time.sleep(3)
+    pyautogui.click()
+
+    pyautogui.moveTo(1073, 862, duration=2)
+    pyautogui.click()
+    pyautogui.moveTo(1335, 919, duration=2)
+    pyautogui.click()
+    pyautogui.moveTo(1824, 539, duration=2)
+    pyautogui.click()
+    time.sleep(3)
+    pyautogui.click()
+
+    pyautogui.moveTo(962, 622, duration=2)
+    pyautogui.click()
+
+    pyautogui.moveTo(1073, 862, duration=2)
+    pyautogui.click()
+    pyautogui.moveTo(1335, 919, duration=2)
+    pyautogui.click()
+    pyautogui.moveTo(1824, 539, duration=2)
+    pyautogui.click()
+    time.sleep(3)
+    pyautogui.click()
+
+    pyautogui.moveTo(1064, 637, duration=2)
+    pyautogui.click()
+
+    pyautogui.moveTo(1073, 862, duration=2)
+    pyautogui.click()
+    pyautogui.moveTo(1335, 919, duration=2)
+    pyautogui.click()
+    pyautogui.moveTo(1824, 539, duration=2)
+    pyautogui.click()
+    time.sleep(3)
+    pyautogui.click()
+
+    pyautogui.moveTo(945, 561, duration=2) #townhall upgrade
+    pyautogui.click()
+
+    pyautogui.moveTo(800, 866, duration=2)
+    pyautogui.click()
+    pyautogui.moveTo(1335, 919, duration=2)
+    pyautogui.click()
+    pyautogui.moveTo(1824, 539, duration=2)
+    pyautogui.click()
+    time.sleep(3)
+    pyautogui.click()
+
+    pyautogui.moveTo(106, 967, duration=2) #attack script
+    pyautogui.click()
+    pyautogui.moveTo(1375, 669, duration=2)
+    pyautogui.click()
+
+    pyautogui.moveTo(1578, 484, duration=10)  # line up screen script
+    pyautogui.dragTo(1178, 724, duration=2)
+
+    pyautogui.moveTo(342, 989, duration=2)
+    pyautogui.click()
+    pyautogui.moveTo(290, 497, duration=2)
+    pyautogui.mouseDown()
+    time.sleep(10)
+    pyautogui.mouseUp()
+    pyautogui.moveTo(938, 928, duration=200)
+    pyautogui.click()
+
+
+    pyautogui.moveTo(1578, 484, duration=2) #reset screen script
+    pyautogui.dragTo(1178, 724, duration=2)
+
+    time.sleep(150)
+    pyautogui.moveTo(920, 422, duration=2)
+    pyautogui.click()
+
+    time.sleep(150)
+
