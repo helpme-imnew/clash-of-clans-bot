@@ -1,0 +1,245 @@
+import threading
+import time
+import pyautogui
+import keyboard  # pip install keyboard
+import tkinter as tk
+
+# ---------- STATE FLAGS ----------
+running = False      # is the bot allowed to run at all
+paused = False       # is the bot paused
+reset_flag = False   # request a reset of the loop
+
+
+# ---------- BOT LOGIC (1440p COORDS) ----------
+def coc_loop():
+    global running, paused, reset_flag
+
+    time.sleep(4)  # initial delay before first run
+
+    while True:
+        if not running:
+            break
+
+        if reset_flag:
+            reset_flag = False
+            # go back to top; you could also re-center screen here if needed
+            continue
+
+        if paused:
+            time.sleep(0.1)
+            continue
+
+        # ---- your actions start here ----
+        # line up screen script
+        pyautogui.moveTo(2104, 645, duration=2)
+        pyautogui.dragTo(1571, 965, duration=2)
+
+        # gold storage script
+        pyautogui.moveTo(1064, 781, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(1431, 1149, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(1780, 1225, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(2432, 719, duration=2)
+        pyautogui.click()
+        time.sleep(3)
+        pyautogui.click()
+
+        pyautogui.moveTo(996, 839, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(1431, 1149, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(1780, 1225, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(2432, 719, duration=2)
+        pyautogui.click()
+        time.sleep(3)
+        pyautogui.click()
+
+        # elixir storage
+        pyautogui.moveTo(1215, 907, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(1431, 1149, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(1780, 1225, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(2432, 719, duration=2)
+        pyautogui.click()
+        time.sleep(3)
+        pyautogui.click()
+
+        pyautogui.moveTo(1145, 941, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(1431, 1149, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(1780, 1225, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(2432, 719, duration=2)
+        pyautogui.click()
+        time.sleep(3)
+        pyautogui.click()
+
+        # gold mines
+        pyautogui.moveTo(1125, 625, duration=2)
+        pyautogui.click()
+        time.sleep(3)
+        pyautogui.click()
+        pyautogui.moveTo(1431, 1149, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(1780, 1225, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(2432, 719, duration=2)
+        pyautogui.click()
+        time.sleep(3)
+        pyautogui.click()
+
+        pyautogui.moveTo(1200, 687, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(1431, 1149, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(1780, 1225, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(2432, 719, duration=2)
+        pyautogui.click()
+        time.sleep(3)
+        pyautogui.click()
+
+        pyautogui.moveTo(1132, 731, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(1431, 1149, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(1780, 1225, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(2432, 719, duration=2)
+        pyautogui.click()
+        time.sleep(3)
+        pyautogui.click()
+
+        # elixir pumps
+        pyautogui.moveTo(1351, 799, duration=2)
+        pyautogui.click()
+        time.sleep(3)
+        pyautogui.click()
+        pyautogui.moveTo(1431, 1149, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(1780, 1225, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(2432, 719, duration=2)
+        pyautogui.click()
+        time.sleep(3)
+        pyautogui.click()
+
+        pyautogui.moveTo(1283, 829, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(1431, 1149, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(1780, 1225, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(2432, 719, duration=2)
+        pyautogui.click()
+        time.sleep(3)
+        pyautogui.click()
+
+        pyautogui.moveTo(1419, 849, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(1431, 1149, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(1780, 1225, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(2432, 719, duration=2)
+        pyautogui.click()
+        time.sleep(3)
+        pyautogui.click()
+
+        # town hall upgrade
+        pyautogui.moveTo(1260, 748, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(1067, 1155, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(1780, 1225, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(2432, 719, duration=2)
+        pyautogui.click()
+        time.sleep(3)
+        pyautogui.click()
+
+        # attack script
+        pyautogui.moveTo(141, 1289, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(1833, 892, duration=2)
+        pyautogui.click()
+
+        # line up screen script
+        pyautogui.moveTo(2104, 645, duration=10)
+        pyautogui.dragTo(1571, 965, duration=2)
+
+        pyautogui.moveTo(456, 1319, duration=2)
+        pyautogui.click()
+        pyautogui.moveTo(387, 663, duration=2)
+        pyautogui.mouseDown()
+        time.sleep(10)
+        pyautogui.mouseUp()
+
+        pyautogui.moveTo(1251, 1237, duration=200)
+        pyautogui.click()
+
+        # reset screen script
+        pyautogui.moveTo(2104, 645, duration=2)
+        pyautogui.dragTo(1571, 965, duration=2)
+
+        time.sleep(150)
+        pyautogui.moveTo(1227, 563, duration=2)
+        pyautogui.click()
+        time.sleep(150)
+        # loop repeats
+
+
+# ---------- CONTROL FUNCTIONS ----------
+def start_bot():
+    global running, paused
+    if not running:
+        running = True
+        paused = False
+        t = threading.Thread(target=coc_loop, daemon=True)
+        t.start()
+    else:
+        paused = False  # resume if paused
+
+
+def pause_bot():
+    global paused
+    paused = True
+
+
+def reset_bot():
+    global running, paused, reset_flag
+    paused = False
+    reset_flag = True
+    running = False   # stop current thread; next Start will spawn a new one
+
+
+# ---------- HOTKEYS ----------
+# F8 start/resume, F9 pause, F10 reset
+keyboard.add_hotkey('f8', start_bot)
+keyboard.add_hotkey('f9', pause_bot)
+keyboard.add_hotkey('f10', reset_bot)  # [web:33][web:36]
+
+
+# ---------- TKINTER GUI ----------
+root = tk.Tk()
+root.title("CoC Bot 1440p")
+
+label = tk.Label(root, text="CoC Bot 1440p\nF8=Start/Resume  F9=Pause  F10=Reset")
+label.pack(padx=10, pady=10)
+
+btn_start = tk.Button(root, text="Start / Resume (F8)", command=start_bot)
+btn_start.pack(fill="x", padx=10, pady=5)
+
+btn_pause = tk.Button(root, text="Pause (F9)", command=pause_bot)
+btn_pause.pack(fill="x", padx=10, pady=5)
+
+btn_reset = tk.Button(root, text="Reset / Stop (F10)", command=reset_bot)
+btn_reset.pack(fill="x", padx=10, pady=5)
+
+root.mainloop()
